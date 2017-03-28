@@ -1,1 +1,1 @@
-puts "Good morning."
+puts "Good morning... or whatever"
