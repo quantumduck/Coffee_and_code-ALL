@@ -7,6 +7,4 @@
     # print HQ
   # if nothng has been printed yet,
     # print number
-  # pring newline
-
-  
+  # print newline

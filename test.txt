@@ -6,3 +6,4 @@ ways to communicate online.
 Even worse than the AOL days.
 Sorry, I'm going to keep picking on you about grammar and spelling.
 That's fine I should pay more attention.
+I also made a typo in pseudo.rb
