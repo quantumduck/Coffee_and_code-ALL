@@ -1,5 +1,7 @@
 puts "why did the chicken cross the road?"
-
 puts "to get to the other side"
-
+puts ""
 puts "Two peanuts were walking down the street. One was a salted."
+puts ""
+puts "Why are all jewish men circumsized?"
+puts "Cause no true jewish woman will touch something unless its 10% off"
