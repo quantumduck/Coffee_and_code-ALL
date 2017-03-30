@@ -62,14 +62,17 @@ class Pizzeria
   def initialize(name = "Pizzeria")
     @name = name
     @open = false
-    @stock = 5
+    @stock = 0
   end
 
   def open
     if @open
       puts "#{@name} is already open."
+    elsif (@stock == 0)
+      puts "#{@name} needs to be restocked"
     else
       @open = true
+      puts "#{@name} is open."
     end
   end
 
@@ -78,6 +81,7 @@ class Pizzeria
       puts "#{@name} is already closed."
     else
       @open = false
+      "#{@name} is closed."
     end
   end
 
