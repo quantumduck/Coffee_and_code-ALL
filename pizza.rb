@@ -9,7 +9,7 @@ class Pizza
   end
 
   def bake
-    if @cooked = false
+    if (@cooked == false)
       @cooked = true
       puts "Your pizza is ready!"
     else
@@ -52,6 +52,65 @@ class Pizza
         @slices -= 1
         puts "You ate a slice. You have #{@slices} left."
       end
+    end
+  end
+
+end
+
+class Pizzeria
+
+  def initialize(name = "Pizzeria")
+    @name = name
+    @open = false
+    @stock = 5
+  end
+
+  def open
+    if @open
+      puts "#{@name} is already open."
+    else
+      @open = true
+    end
+  end
+
+  def closed
+    if !@open
+      puts "#{@name} is already closed."
+    else
+      @open = false
+    end
+  end
+
+  def order (number = 1, toppings = [[:pepperoni]])
+    unless !@open
+      puts "Sorry, #{@name} is closed."
+      return
+    end
+
+    unless (number.to_i <= 0)
+      puts "Please choose a positive number of pizzas."
+      return
+    end
+
+    if (number.to_i > @stock)
+      puts "Sorry, #{@name} can only handle #{@stock} pizzas."
+      return
+    else
+      pizzas = []
+      @stock -= number.to_i
+      number.to_i.time do |index|
+        pizzas[index] = Pizza.new(toppings[index])
+      end
+      return pizzas
+    end
+  end
+
+  def restock
+    if !@open
+      @stock = 5
+      puts "#{@name} is restocked."
+    else
+      puts "Please close #{@name} first."
     end
   end
 
