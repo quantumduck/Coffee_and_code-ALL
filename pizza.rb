@@ -82,12 +82,12 @@ class Pizzeria
   end
 
   def order (number = 1, toppings = [[:pepperoni]])
-    unless !@open
+    unless @open
       puts "Sorry, #{@name} is closed."
       return
     end
 
-    unless (number.to_i <= 0)
+    unless (number.to_i > 0)
       puts "Please choose a positive number of pizzas."
       return
     end
@@ -98,8 +98,12 @@ class Pizzeria
     else
       pizzas = []
       @stock -= number.to_i
-      number.to_i.time do |index|
+      number.to_i.times do |index|
         pizzas[index] = Pizza.new(toppings[index])
+      end
+      pizzas.each do |pizza|
+        pizza.bake
+        pizza.cut
       end
       return pizzas
     end
