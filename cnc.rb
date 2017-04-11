@@ -58,7 +58,26 @@
     return true
   end
 
+  def luck_check(number)
+    case number
+    when Integer
+      unless number >= 0
+        return "Error: #{number} is negative."
+    when String
+      number.length.times do |i|
+        unless number[i] == '0'
+          if number[i].to_i <= 0
+            return "Error: #{number[i]} is not a decimal digit."
+          end
+        end
+      end
+      
+    else
+      puts "else"
+    end
+  end
 
+  luck_check("1092")
 
 puts "create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])"
 puts create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
