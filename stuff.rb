@@ -30,6 +30,11 @@ def find_longest(arr)
   longest
 end
 
+def find_longest_alt(array)
+  array.max { |a, b| a.length <=> b.length }
+end
+
+
 colours = %w(red blue green yellow chartreuse orange periwinkle tomato cobalt)
 
 puts find_longest(colours)
