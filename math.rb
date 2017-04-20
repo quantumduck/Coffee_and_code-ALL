@@ -1,30 +1,32 @@
 def prime(max_val)
-  indexes = (max_val - 1).times.to_a
-  primes = indexes.map { |i| i + 2 }
+  indexes = (max_val - 1).times.to_a # array from 0 to max_val - 2
+  primes = indexes.map { |i| i + 2 } # array from 2 to max_val
   index = 0
   while index < primes.length
+    # we have to use while because prime.length changes during iteration.
     primes.delete_if { |p| (p > primes[index]) && (p % primes[index] == 0) }
+    # delete all numbers greater than the current number if they are multiples.
     index += 1
   end
-  primes
+  primes # ensure you return the array.
 end
 
 def is_prime?(n)
   if n < 2
-    false
+    false # no primes < 2
   elsif n == 2
-    true
+    true # 2 is a prime
   elsif n % 2 == 0
-    false
+    false # no even primes > 2
   elsif
-    factor = 3
-    while factor < (n/2)
+    factor = 3 # lowest possible odd prime factor
+    while factor < (n/2) # only check factors up to n/2 or (n**0.5 if you like)
       if n % factor == 0
-        return false
+        return false # numbers with prime factors are not prime
       end
-      factor += 2
+      factor += 2 # go to the next prime factor
     end
-    true
+    true # if the while look reaches the end, no prime factors were found.
   end
 end
 
