@@ -9,6 +9,24 @@ def prime(max_val)
   primes
 end
 
+def is_prime?(n)
+  if n < 2
+    false
+  elsif n == 2
+    true
+  elsif n % 2 == 0
+    false
+  elsif
+    factor = 3
+    while factor < (n/2)
+      if n % factor == 0
+        return false
+      end
+      factor += 2
+    end
+    true
+  end
+end
 
 puts prime(100).to_s
 
