@@ -31,5 +31,5 @@ def find_no_bs_at_all(list)
   matches
 end
 
-puts "find_non_intial_bs(['Ben', 'Edwin', 'Lauren', 'Ruby']).to_s"
-puts find_non_intial_bs(['Ben', 'Edwin', 'Lauren', 'Ruby']).to_s
+puts "find_no_bs_at_all(['Ben', 'Edwin', 'Lauren', 'Ruby']).to_s"
+puts find_no_bs_at_all(['Ben', 'Edwin', 'Lauren', 'Ruby']).to_s
