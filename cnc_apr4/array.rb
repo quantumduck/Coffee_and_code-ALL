@@ -17,6 +17,8 @@ end
 
 puts mk_array(8).to_s
 
+# %w(first, second, third, fourth, fifth, sixth)
+
 puts screw_up(["first", "second", "third", "fourth", "fifth", "sixth"]).to_s
 
 movies = [['Alfonso Cuaron', 'Gravity'], ['Spike Jonze', 'Her'], ['Martin Scorsese', 'The Wolf of Wall Street']]
