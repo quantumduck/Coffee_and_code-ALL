@@ -41,3 +41,7 @@ function weekday(day) {
 console.log('\nJS Current Date');
 // document.body.innerHTML = "Today is: " + weekday(today.getDay()) + '.  Current time is: ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds() + '.';
 console.log("Today is: " + weekday(today.getDay()) + '.  Current time is: ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds() + '.');
+
+
+console.log('\nNumber Guessing Game');
+let number = Math.floor(Math.random() * 10) + 1;
